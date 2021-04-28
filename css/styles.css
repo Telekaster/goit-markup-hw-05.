@@ -270,13 +270,48 @@ footer {
   padding: 20px 24px 4px 24px;
 }
 
-.active-page {
+.active-page-main {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--brandcolor);
 }
+
+
+
+.active-page-main::after{
+display: block;
+content: "";
+position: absolute;
+width: 48px;
+height: 4px;
+left: 445px;
+top: 76px;
+background: var(--brandcolor);
+border-radius: 2px;
+}
+
+.active-page-portfolio {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--brandcolor);
+}
+
+.active-page-portfolio::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 78px;
+  height: 4px;
+  left: 585px;
+  top: 76px;
+  background: var(--brandcolor);
+  border-radius: 2px;
+}
+
 
 .center {
   font-weight: bold;
