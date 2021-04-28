@@ -44,15 +44,13 @@ body {
   color: inherit;
 }
 
+
 .link:hover,
 .link:focus {
   color: var(--brandcolor);
-}
-
-button:hover,
-button:focus {
-  color: var(--background-color-white);
-  background-color: var(--brandcolor);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h2 {
@@ -203,11 +201,19 @@ footer {
   background: var(--background-color-grey);
   border-radius: 4px;
   cursor: pointer;
-  /* width: 73px; */
   height: 38px;
   border: 0;
   padding-left: 22px;
   padding-right: 22px;
+}
+
+.btn2:hover,
+.btn2:focus {
+  color: var(--background-color-white);
+  background-color: var(--brandcolor);
+  transition-property: color, background-color, shadow-box;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden {
@@ -286,9 +292,9 @@ content: "";
 position: absolute;
 width: 48px;
 height: 4px;
-left: 445px;
+left: 687px;
 top: 76px;
-background: var(--brandcolor);
+background: #2196F3;
 border-radius: 2px;
 }
 
@@ -306,7 +312,7 @@ border-radius: 2px;
   position: absolute;
   width: 78px;
   height: 4px;
-  left: 585px;
+  left: 825px;
   top: 76px;
   background: var(--brandcolor);
   border-radius: 2px;
@@ -438,18 +444,20 @@ border-radius: 2px;
 
 .portfolio-buttons {
   display: flex;
-  /* margin-top: 94px; */
   margin-bottom: 50px;
-  justify-content: center;
+  justify-content: center;  
 }
 
-.portfolio-buttons-item {
+.portfolio-buttons-item:not(:last-child) {
   margin-right: 8px;
 }
 
 .portfolio-buttons-item:hover,
 .portfolio-buttons-item:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list {
@@ -464,8 +472,12 @@ border-radius: 2px;
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.portfolio-list-item:hover {
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -509,12 +521,20 @@ border-radius: 2px;
   border-radius: 50%;
 }
 
-.social-list-item-link:hover .social-icon {
+.social-list-item-link:hover .social-icon,
+.social-list-item-link:focus .social-icon {
   fill: var(--background-color-white);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-list-item-link:hover {
+.social-list-item-link:hover,
+.social-list-item-link:focus {
   background-color: var(--brandcolor);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
@@ -546,12 +566,20 @@ border-radius: 2px;
   border-radius: 4px;
 }
 
-.clients-list-item-link:hover {
+.clients-list-item-link:hover,
+.clients-list-item-link:focus {
   border: 1px solid var(--brandcolor);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-list-item-link:hover .clients-list-item-icon {
+.clients-list-item-link:hover .clients-list-item-icon,
+.clients-list-item-link:focus .clients-list-item-icon {
   fill: var(--brandcolor);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-class {
@@ -591,17 +619,18 @@ border-radius: 2px;
 
 .social-list-item-link-footer:hover,
 .social-list-item-link-footer:focus {
-  background: var(--brandcolor) ;
+  background-color: var(--brandcolor);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon {
-  /* width: 20px;
-  height: 20px; */
   fill: var(--background-color-white);
 }
 
 .join-us {
-  color: var(--background-color-white)
+  color: var(--background-color-white);
 }
 
 .antenna {
@@ -614,10 +643,6 @@ border-radius: 2px;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-}
-
-.skills-icons {
-  
 }
 
 .envelope-icon {
