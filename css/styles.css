@@ -714,3 +714,70 @@ text-transform: uppercase;
 color:var(--background-color-white);
 background-color: rgba(47, 48, 58, 0.8);
 }
+
+.overlay-text {
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  width: 370px;
+  height: 294px;
+  position: absolute;
+  visibility: hidden;
+  display: flex;
+  color: var(--background-color-white);
+  background-color: var(--brandcolor);
+  padding: 64px 24px 64px 24px;
+}
+
+.overlay:hover .overlay-text {
+  visibility: visible;
+  transform: translateY(-295px);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.overlay-techno {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  Width: 528px;
+  Height: 581px;
+  background-color: var(--background-color-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--background-color-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top:8px;
+  right: 8px;
+}
+
+.modal-close-icon {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  
+}
+
+
